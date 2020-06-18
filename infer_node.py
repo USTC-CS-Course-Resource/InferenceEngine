@@ -213,8 +213,12 @@ class InferNode:
 
     @staticmethod
     def infer(infer_node_queue):
+        times = 1
         while True:
             q_size = len(infer_node_queue)
+            times += 1
+            if times % 100000 == 0:
+                print('第{}次迭代, 队列长为{}'.format(times, q_size))
             if q_size == 0:
                 return None
             for i in range(q_size):

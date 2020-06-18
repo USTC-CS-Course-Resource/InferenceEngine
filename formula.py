@@ -236,7 +236,6 @@ class Formula:
                 return assignment[_exp]
         return confirm(self.exp, assignment=assign)
 
-
     def get_truth_value(self):
         """
         :return: 公式真值
