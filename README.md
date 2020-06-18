@@ -4,6 +4,8 @@
 
 数理方程推理机(效率比较低, 稍微复杂一点的推理就很久都出不来)
 
+一些示例公式[见此处](https://github.com/RabbitWhite1/InferenceEngine/blob/master/InputData.md)
+
 ## 使用方法
 
 以练习3中3.5°为例
