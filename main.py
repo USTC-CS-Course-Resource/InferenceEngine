@@ -19,7 +19,7 @@ def main():
         print("The Truth Value isn't True!")
         return
 
-    print('Computing Begin!')
+    print('Computing Begins!')
     begin = time.time()
 
     final_infer_node = InferNode.infer([InferNode(target, premise_set)])
