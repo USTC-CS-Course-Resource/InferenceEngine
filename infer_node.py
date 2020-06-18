@@ -7,6 +7,7 @@ class InferNode:
     MAX_IMP_NUM = 8
     MAX_LAYER_NUM = 6
     ENABLE_NUM = False
+    ENABLE_L2_222 = False
 
     def __init__(self, root_f=None, premise_list=None):
         if premise_list is None:
@@ -146,21 +147,25 @@ class InferNode:
                         leaves[i].imp_and_layer_num <= (InferNode.MAX_IMP_NUM, InferNode.MAX_LAYER_NUM):
                     new_infer_node_list.append(new_infer_node)
                 new_infer_node, leaves = self.copy()
+            #   L2的后件的后件
             if leaves[i].try_as_l2_22():
                 if InferNode.ENABLE_NUM or \
                         leaves[i].imp_and_layer_num <= (InferNode.MAX_IMP_NUM, InferNode.MAX_LAYER_NUM):
                     new_infer_node_list.append(new_infer_node)
                 new_infer_node, leaves = self.copy()
-            if leaves[i].try_as_l2_222():
+            #   L2的后件的后件的后件
+            if InferNode.ENABLE_L2_222 and leaves[i].try_as_l2_222():
                 if InferNode.ENABLE_NUM or \
                         leaves[i].imp_and_layer_num <= (InferNode.MAX_IMP_NUM, InferNode.MAX_LAYER_NUM):
                     new_infer_node_list.append(new_infer_node)
                 new_infer_node, leaves = self.copy()
+            #   L3的后件的后件
             if leaves[i].try_as_l3_2():
                 if InferNode.ENABLE_NUM or \
                         leaves[i].imp_and_layer_num <= (InferNode.MAX_IMP_NUM, InferNode.MAX_LAYER_NUM):
                     new_infer_node_list.append(new_infer_node)
                 new_infer_node, leaves = self.copy()
+            #   L3的后件的后件
             if leaves[i].try_as_l3_22():
                 if InferNode.ENABLE_NUM or \
                         leaves[i].imp_and_layer_num <= (InferNode.MAX_IMP_NUM, InferNode.MAX_LAYER_NUM):
