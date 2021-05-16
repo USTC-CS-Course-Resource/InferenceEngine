@@ -1,6 +1,6 @@
 # InferenceEngine
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/RabbitWhite1/USTC-Health-Report/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/USTC-CS-Course-Resource/InferenceEngine/blob/master/LICENSE)
 
 数理方程推理机(效率比较低, 稍微复杂一点的推理就很久都出不来)
 
